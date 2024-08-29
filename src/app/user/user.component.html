@@ -1,0 +1,15 @@
+<button
+  (click)="onSelectUser()"
+  class="w-full flex gap-3 items-center px-4 py-2 rounded-xl hover:bg-green-300"
+  [class.bg-green-100]="!selected"
+  [class.bg-green-300]="selected"
+>
+  <img
+    [src]="imagePath"
+    [alt]="user.avatar"
+    class="rounded-full object-cover"
+    width="30"
+    height="30"
+  />
+  <span class="text-left">{{ user.name }}</span>
+</button>

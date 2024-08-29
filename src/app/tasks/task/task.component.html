@@ -1,0 +1,13 @@
+<article class="flex flex-col gap-3 bg-green-200 px-3 py-2 rounded-lg">
+  <div>
+    <h2 class="text-lg text-green-600 font-semibold">{{ task.title }}</h2>
+    <time class="text-xs">{{ task.dueDate | date : "fullDate" }}</time>
+  </div>
+  <p>{{ task.summary }}</p>
+  <button
+    class="bg-green-300 hover:bg-green-400 text-sm py-2 px-4 rounded-lg w-36 self-end"
+    (click)="completeTask()"
+  >
+    Complete
+  </button>
+</article>
